@@ -1,0 +1,25 @@
+Producer—> Kafka Ecosystem ——>Consumer
+
+Kafka Ecosystem
+ Kafka Cluster
+   Broker 1
+	Topic-A
+	partition-1(ofset)
+	partition-2
+  Broker 2
+	Topic-B
+ Zookeeper(manages domains)
+
+
+
+Kafka-topics
+
+Create topic user-topic.
+bin/kafka-topics.sh  --create --topic user-topic --bootstrap-server localhost:9092
+bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+
+Kafka-console-consumer
+bin/kafka-console-producer.sh --topic user-topic --bootstrap-server localhost:9092
+
+Kafka-console-consumer
+bin/kafka-console-consumer.sh --topic user-topic --from-beginning --bootstrap-server localhost:9092
